@@ -1,0 +1,19 @@
+language: python
+python:
+  - "3.7"
+# command to install dependencies
+install:
+  - pip install matplotlib numpy jupyter 
+  - pip install git+https://github.com/econ-ark/HARK.git@master
+# command to run tests
+script:
+  - pytest --nbval-lax REMARKs/BufferStockTheory/Code/Python/BufferStockTheory.ipynb
+  
+notifications:
+  email:
+    recipients:
+      - seth.mridul+travis@gmail.com
+        #   - shaunagm@gmail.com
+        #- ccarroll@llorracc.org
+    on_success: never # default: change
+    on_failure: always # default: always
