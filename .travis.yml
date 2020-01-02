@@ -7,7 +7,7 @@ python:
 # command to install dependencies
 
 install:
-  - pip install matplotlib numpy jupyter 
+  - pip install matplotlib numpy jupyter nbval pytest 
   - pip install git+https://github.com/econ-ark/HARK.git@master
 # command to run tests
 script:
